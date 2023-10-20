@@ -44,7 +44,7 @@ def create_resource():
             similarity = calculate_similarity(text1, text2)
                 # similarities.append(similarity)
 
-        return jsonify({"“similarity score": similarity}), 201
+        return jsonify({"similarity score": round(similarity,2)}), 201
     except Exception as e:
         return jsonify({"error": str(e)}), 400
 
