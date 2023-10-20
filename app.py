@@ -1,12 +1,14 @@
+import nltk
+nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('stopwords')
+app = Flask(__name__)
 from flask import Flask, request, jsonify
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-import nltk
-nltk.download('wordnet')
-nltk.download('punkt')
-app = Flask(__name__)
+
 
 # A list to store data (simulate a database)
 data = []
