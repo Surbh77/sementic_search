@@ -3,7 +3,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-
+nltk.download('wordnet')
+nltk.download('punkt')
 app = Flask(__name__)
 
 # A list to store data (simulate a database)
